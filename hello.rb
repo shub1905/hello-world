@@ -1,11 +1,9 @@
 def fibo(n)
-	if n<=0
-		return 0
-	else if n<=2
-		return 1
-	else
-		return fibo(n-1) + fibo(n-2)
+	a = [1,1]
+	(n-2).times do |i|
+		a[i+2] = a[i] + a[i+1]
 	end
+	return a
 end
 
-print fibo(9),"\n"
+print fibo(90),"\n"
